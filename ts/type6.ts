@@ -116,6 +116,7 @@ class Dong {
   }
 }
 
+
 type ClassPublicPropsResult = ClassPublicProps<Dong>;
 
 
