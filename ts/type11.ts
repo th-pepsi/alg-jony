@@ -3,6 +3,7 @@ type KebabCaseToCamelCase<Str extends string> =
   ? `${Item}${KebabCaseToCamelCase<Capitalize<Rest>>}`
   : Str;
 
+  
 function kebabCaseToCamelCase<Str extends string>(str: Str): KebabCaseToCamelCase<Str> {
   let arr = str.split('-')
   let res = arr[0] as any
