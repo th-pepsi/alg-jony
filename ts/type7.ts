@@ -4,6 +4,8 @@ type ParseParam<Param extends string> =
             [K in Key]: Value 
         } : {};
 
+type ParseParamResult = ParseParam<'a=1'>;
+
 type MergeValues<One, Other> = 
     One extends Other 
         ? One
@@ -25,6 +27,8 @@ type MergeParams<
             : never
 }
 
+type MergeParamsResult = MergeParams<{ a: 1 }, { b: 2,c:33 ,a:33}>;
+
 type ParseQueryString<Str extends string> = 
     Str extends `${infer Param}&${infer Rest}`
         ? MergeParams<ParseParam<Param>, ParseQueryString<Rest>>
@@ -32,5 +36,3 @@ type ParseQueryString<Str extends string> =
 
 
 type ParseQueryStringResult = ParseQueryString<'a=1&a=2&b=2&c=3'>;
-
-
