@@ -1,5 +1,4 @@
 // ParseQueryString
-
 type ParseParam<Param extends string> = 
     Param extends `${infer Key}=${infer Value}`
         ? {
@@ -53,11 +52,7 @@ function parseQueryString<Str extends string>(queryStr: Str): ParseQueryString<S
     return queryObj as any;
 }
 
-
 const res = parseQueryString('a=1&b=2&c=3');
-
-
-
 // PromiseConstructor
 
 interface PromiseConstructor {
