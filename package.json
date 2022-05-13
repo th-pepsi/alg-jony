@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/th-pepsi/alg-jony/issues"
   },
-  "homepage": "https://github.com/th-pepsi/alg-jony#readme"
+  "homepage": "https://github.com/th-pepsi/alg-jony#readme",
+  "dependencies": {
+    "@type-challenges/utils": "^0.1.1"
+  }
 }
